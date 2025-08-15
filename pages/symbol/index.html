@@ -140,20 +140,100 @@
       </header>
 
 
-    <!-- 모바일 메뉴 -->
-<div id="mobileMenu" class="hidden md:hidden flex-col bg-neutral-900 text-white p-4 space-y-4 rounded-xl mt-2 shadow-lg">
-  <nav class="flex flex-col space-y-2 text-sm">
-    <a href="#" class="py-2 px-3 rounded hover:bg-white/10">학교 소개</a>
-    <a href="#" class="py-2 px-3 rounded hover:bg-white/10">교육 활동</a>
-    <a href="#" class="py-2 px-3 rounded hover:bg-white/10">학생 지원</a>
-    <a href="#" class="py-2 px-3 rounded hover:bg-white/10">행정/정보</a>
-    <a href="#" class="py-2 px-3 rounded hover:bg-white/10">동창회</a>
-  </nav>
+<!-- 모바일 메뉴 -->
+<div id="mobileMenu" class="hidden md:hidden flex-col bg-neutral-900 text-white p-4 space-y-2 rounded-xl mt-2 shadow-lg">
+  <!-- 학교 소개 -->
+  <div>
+    <button class="w-full flex justify-between items-center py-2 px-3 rounded hover:bg-white/10" onclick="toggleDropdown('aboutDropdown')">
+      학교 소개
+      <span id="aboutDropdownIcon">▸</span>
+    </button>
+    <div id="aboutDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/greetings/" class="block py-1 px-3 rounded hover:bg-white/20">인사말</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/since/" class="block py-1 px-3 rounded hover:bg-white/20">학교연혁</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/symbol/" class="block py-1 px-3 rounded hover:bg-white/20">학교상징</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/situation/" class="block py-1 px-3 rounded hover:bg-white/20">학교현황</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/map/" class="block py-1 px-3 rounded hover:bg-white/20">오시는길</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/reservation/" class="block py-1 px-3 rounded hover:bg-white/20">시설예약</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/staffs/" class="block py-1 px-3 rounded hover:bg-white/20">교직원 소개</a>
+  <a href="https://team-nexusway.github.io/jungang-hs/pages/counsel/" class="block py-1 px-3 rounded hover:bg-white/20">학부모 민원상담 예약</a>
+</div>
+  </div>
+
+  <!-- 교육 활동 -->
+  <div>
+    <button class="w-full flex justify-between items-center py-2 px-3 rounded hover:bg-white/10" onclick="toggleDropdown('eduDropdown')">
+      교육 활동
+      <span id="eduDropdownIcon">▸</span>
+    </button>
+    <div id="eduDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+    <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">교과마당</a>
+    <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">부서별 교육활동</a>
+    <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">주간소식/공지사항</a>
+    <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">창체·동아리활동 및 봉사활동</a>
+    </div>
+  </div>
+
+  <!-- 학생 지원 -->
+  <div>
+    <button class="w-full flex justify-between items-center py-2 px-3 rounded hover:bg-white/10" onclick="toggleDropdown('studentDropdown')">
+      학생 지원
+      <span id="studentDropdownIcon">▸</span>
+    </button>
+    <div id="studentDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">총학생회</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">상담(성폭력·학교폭력)</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">학사일정/앨범·동영상/보도자료</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">진학자료/대학입시/수능기출문제</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">생활관/기숙사/식생활관 및 급식</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">교무실/가정통신문/행정실/보건실/상담실</a>
+    </div>
+  </div>
+
+  <!-- 행정/정보 -->
+  <div>
+    <button class="w-full flex justify-between items-center py-2 px-3 rounded hover:bg-white/10" onclick="toggleDropdown('adminDropdown')">
+      행정/정보
+      <span id="adminDropdownIcon">▸</span>
+    </button>
+    <div id="adminDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">학교운영위원회</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">예산결산공개·발전기금</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">정보공개/공공데이터</a>
+    </div>
+  </div>
+
+  <!-- 동창회 -->
+  <div>
+    <button class="w-full flex justify-between items-center py-2 px-3 rounded hover:bg-white/10" onclick="toggleDropdown('alumniDropdown')">
+      동창회
+      <span id="alumniDropdownIcon">▸</span>
+    </button>
+    <div id="alumniDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">총동창회</a>
+              <a href="#" class="block py-1 px-3 rounded hover:bg-white/20">재경동창회</a>
+    </div>
+  </div>
+
+  <!-- 로그인 / 사이트맵 -->
   <div class="pt-4 border-t border-white/10 flex gap-2">
     <a href="https://team-nexusway.github.io/jungang-hs/login" class="flex-1 rounded-full bg-white/90 text-neutral-900 text-sm font-medium px-4 py-2 hover:bg-white">로그인</a>
     <a href="https://example.com/" class="flex-1 rounded-full border border-white/40 text-white text-sm font-medium px-4 py-2 hover:bg-white/10">사이트맵</a>
-        </div>
+  </div>
+</div>
+
+<script>
+function toggleDropdown(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('hidden');
+
+  const icon = document.getElementById(id + 'Icon');
+  icon.textContent = el.classList.contains('hidden') ? '▸' : '▾';
+}
+</script>
+
       </div>
+    </div>
     </div>
 
 
