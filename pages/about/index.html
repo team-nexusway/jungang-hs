@@ -72,16 +72,16 @@
         <!-- PC 메뉴 -->
         <nav class="hidden md:flex items-center gap-1 text-sm text-white/90">
           <div class="menu-item">
-            <a href="/pages/about/index.html">학교 소개</a>
+            <a href="#">학교 소개</a>
             <div class="dropdown">
-              <a href="/pages/greetings/index.html">인사말</a>
-              <a href="/pages/since/index.html">학교연혁</a>
-              <a href="/pages/symbol/index.html">학교상징</a>
-              <a href="/pages/situation/index.html">학교현황</a>
-              <a href="/pages/map/index.html">오시는길</a>
-              <a href="/pages/reservation/index.html">시설예약</a>
-              <a href="/pages/staffs/index.html">교직원 소개</a>
-              <a href="/pages/counsel/index.html">학부모 민원상담 예약</a>
+              <a href="#">인사말</a>
+              <a href="#">학교연혁</a>
+              <a href="#">학교상징</a>
+              <a href="#">학교현황</a>
+              <a href="#">오시는길</a>
+              <a href="#">시설예약</a>
+              <a href="#">교직원 소개</a>
+              <a href="#">학부모 민원상담 예약</a>
             </div>
           </div>
           <div class="menu-item">
@@ -159,7 +159,7 @@
 
       <div class="mt-8 flex items-center justify-center gap-4">
        <a href="#" class="inline-flex rounded-full bg-white/90 text-neutral-900 text-sm font-semibold px-5 py-2.5 hover:bg-white shadow" style="font-family: 'Pretendard-Light';"> 입학안내</a>
-       <a href="/pages/map/index.html" class="inline-flex rounded-full bg-white/15 text-white text-sm font-semibold px-5 py-2.5 border border-white/30 hover:bg-white/20" style="font-family: 'Pretendard-Light';"> 오시는길</a>
+       <a href="#" class="inline-flex rounded-full bg-white/15 text-white text-sm font-semibold px-5 py-2.5 border border-white/30 hover:bg-white/20" style="font-family: 'Pretendard-Light';"> 오시는길</a>
       </div>
     </div>
   </section>
@@ -187,7 +187,7 @@
 <section class="bg-white text-neutral-900 py-16">
   <div class="max-w-[1100px] mx-auto px-6">
     <!-- 타이틀 -->
-    <h2 class="text-2xl md:text-3xl font-bold text-center" style="font-family: 'Pretendard-ExtraBold';">창조적 인간 교육의 요람!</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center" style="font-family: 'Pretendard-ExtraBold';">도전과 창조의 중심, 군산중앙고</h2>
     <p class="text-center text-neutral-500 mt-1">꿈과 열정이 모이는 군산중앙고등학교입니다.</p>
 
     <!-- 그리드 (왼쪽 2칸, 오른쪽 3칸) -->
@@ -256,66 +256,6 @@
  Copyright © 2025. Team NexusWay. All Rights Reserved.| Powered by <a href="https://school.jbedu.kr/gs-jungang" target="_blank" class="footer-link-span">JUNGANG High School</a>
 </footer>
 
-<!-- 공지 팝업 -->
-<div id="noticePopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden">
-  <div class="bg-white rounded-xl shadow-lg max-w-md w-[90%] p-6 relative animate-fadeIn">
-    <!-- 닫기 버튼 -->
-    <button id="closeNotice" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl font-bold">
-      &times;
-    </button>
-
-<!-- 팝업 내용 -->
-<h2 class="text-2xl font-bold mb-3 text-gray-900" style="font-family: 'Pretendard-Bold';">
-  공지 안내
-</h2>
-<p class="text-gray-800 mb-6" style="font-family: 'Pretendard-Regular'; line-height:1.6;">
-  안녕하세요, 방문자님.<br>
-  본 홈페이지는 <span class="font-semibold">팀넥서스웨이 비공식 프로젝트</span>입니다.<br><br>
-  일부 페이지는 현재 이용이 제한될 수 있으며, 게시된 정보는 최신성을 보장하지 않습니다.<br>
-  참고용으로만 활용해 주시기 바랍니다.<br><br>
-  보다 정확한 정보는 공식 홈페이지를 통해 확인해 주세요.
-</p>
-
-    <!-- 버튼 영역 -->
-    <div class="flex flex-col sm:flex-row justify-end gap-3">
-      <button id="acknowledgeNotice" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium" style="font-family: 'Pretendard-Medium';">
-        확인
-      </button>
-      <a href="https://school.jbedu.kr/gs-jungang" target="_blank" class="bg-gray-200 hover:bg-gray-300 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium text-center" style="font-family: 'Pretendard-Medium';">
-        공식 홈페이지 바로가기
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- 스크립트 -->
-<script>
-  const noticePopup = document.getElementById('noticePopup');
-  const closeNotice = document.getElementById('closeNotice');
-  const acknowledgeNotice = document.getElementById('acknowledgeNotice');
-
-  if (!localStorage.getItem('noticeAcknowledged')) {
-    noticePopup.classList.remove('hidden');
-  }
-
-  const hidePopup = () => {
-    noticePopup.classList.add('hidden');
-    localStorage.setItem('noticeAcknowledged', 'true');
-  }
-
-  closeNotice.addEventListener('click', hidePopup);
-  acknowledgeNotice.addEventListener('click', hidePopup);
-</script>
-
-<style>
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fadeIn {
-    animation: fadeIn 0.35s ease-out;
-  }
-</style>
 
 
 </body>

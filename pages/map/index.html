@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>군산중앙고등학교</title>
+  <title>군산중앙고등학교ㅣ오시는길</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @font-face {
@@ -54,11 +54,15 @@
     .dropdown a:hover { background: rgba(255,255,255,.1); }
     .menu-item:hover .dropdown { display: block; }
     .hero::before{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.35) 40%, rgba(0,0,0,.55) 100%);}    
+    .nav-wrap { 
+  transition: all .35s ease; 
+  height: 64px; 
+  background: rgba(20,20,20,.6); /* 스크롤 전 배경색 */
+  backdrop-filter: blur(10px);
+}
   </style>
 </head>
-<body class="bg-neutral-950 text-white">
-  <section class="relative hero min-h-[88vh]">
-    <img src="https://ifh.cc/g/W4sKvz.jpg" alt="학교 전경" class="absolute inset-0 w-full h-full object-cover object-center opacity-70 blur-sm" />
+
     
     <!-- 네비게이션 -->
     <div id="navWrap" class="nav-wrap fixed left-0 right-0 top-0 z-40">
@@ -129,9 +133,9 @@
 
         <!-- 모바일 햄버거 -->
         <button id="mobileMenuBtn" class="md:hidden p-2 rounded hover:bg-white/10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
+       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
         </button>
       </header>
 
@@ -152,17 +156,7 @@
       </div>
     </div>
 
-    <!-- 히어로 콘텐츠 -->
-    <div class="relative z-10 max-w-[1100px] mx-auto px-6 pt-[28vh] pb-24 text-center">
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">군산중앙고등학교</h1>
-      <p class="mt-4 text-lg text-white/80">도전! 창조! 혁신! 군산중앙고등학교입니다.</p>
 
-      <div class="mt-8 flex items-center justify-center gap-4">
-       <a href="#" class="inline-flex rounded-full bg-white/90 text-neutral-900 text-sm font-semibold px-5 py-2.5 hover:bg-white shadow" style="font-family: 'Pretendard-Light';"> 입학안내</a>
-       <a href="/pages/map/index.html" class="inline-flex rounded-full bg-white/15 text-white text-sm font-semibold px-5 py-2.5 border border-white/30 hover:bg-white/20" style="font-family: 'Pretendard-Light';"> 오시는길</a>
-      </div>
-    </div>
-  </section>
 
   <!-- 스크립트 -->
   <script>
@@ -181,142 +175,59 @@
     });
   </script>
 
+<!-- 오시는 길 섹션 -->
+<section class="relative min-h-[80vh] flex flex-col items-center justify-start bg-gray-100 text-gray-800 px-6 pt-36 pb-16">
+  <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6" style="font-family: 'Pretendard-ExtraBold';">오시는길</h1>
+  <p class="text-lg mb-8">군산중앙고등학교 위치 및 찾아오는 길 안내</p>
 
+  <!-- 지도 -->
+  <div id="map" class="w-full max-w-4xl h-96 mb-8 rounded-lg overflow-hidden border border-gray-300"></div>
 
-<!-- 메인 컨텐츠 섹션 -->
-<section class="bg-white text-neutral-900 py-16">
-  <div class="max-w-[1100px] mx-auto px-6">
-    <!-- 타이틀 -->
-    <h2 class="text-2xl md:text-3xl font-bold text-center" style="font-family: 'Pretendard-ExtraBold';">창조적 인간 교육의 요람!</h2>
-    <p class="text-center text-neutral-500 mt-1">꿈과 열정이 모이는 군산중앙고등학교입니다.</p>
+  <!-- 주소 및 안내 -->
+  <div class="bg-gray-50 p-6 rounded-lg max-w-4xl w-full border border-gray-300">
+    <h2 class="text-2xl font-bold mb-3" style="font-family: 'Pretendard-Bold';">학교 주소</h2>
+    <p style="font-family: 'Pretendard-Light';">(우:54045) 전라북도 군산시 성산면 군장대길 13</p>
 
-    <!-- 그리드 (왼쪽 2칸, 오른쪽 3칸) -->
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- 왼쪽 -->
-      <div class="grid grid-rows-2 gap-6">
-        <div class="bg-neutral-100 rounded-lg p-5 flex flex-col">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-semibold">공지사항</h3>
-            <a href="#" class="flex items-center gap-1 text-sm text-neutral-600 hover:underline">더보기 <span>＋</span></a>
-          </div>
-          <div class="flex-1"></div>
-        </div>
-        <div class="bg-neutral-100 rounded-lg p-5 flex flex-col">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-semibold">학사일정</h3>
-            <a href="#" class="flex items-center gap-1 text-sm text-neutral-600 hover:underline">더보기 <span>＋</span></a>
-          </div>
-          <div class="flex-1"></div>
-        </div>
-      </div>
-      <!-- 오른쪽 -->
-      <div class="grid grid-rows-3 gap-6">
-        <div class="bg-neutral-100 rounded-lg p-5 flex flex-col">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-semibold">가정통신문</h3>
-            <a href="#" class="flex items-center gap-1 text-sm text-neutral-600 hover:underline">더보기 <span>＋</span></a>
-          </div>
-          <div class="flex-1"></div>
-        </div>
-        <div class="bg-neutral-100 rounded-lg p-5 flex flex-col">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-semibold">이달의 식단</h3>
-            <a href="#" class="flex items-center gap-1 text-sm text-neutral-600 hover:underline">더보기 <span>＋</span></a>
-          </div>
-          <div class="flex-1"></div>
-        </div>
-        <div class="bg-neutral-100 rounded-lg p-5 flex flex-col">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-semibold">학교앨범</h3>
-            <a href="#" class="flex items-center gap-1 text-sm text-neutral-600 hover:underline">더보기 <span>＋</span></a>
-          </div>
-          <div class="flex-1"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 하단 로고 -->
-    <div class="flex flex-wrap justify-center items-center gap-4 mt-10">
-      <img src="https://school.jbedu.kr/files/2022/05/gs-jungang/1ba930b442c24f51b76d89c27c341ba2.jpg" alt="국민추천포상 안내" class="h-10">
-      <img src="https://school.jbedu.kr/files/2022/07/gs-jungang/be1253ced2e14383a8aec96f9ac816c1.gif" alt="자율교과 온라인 신청" class="h-10">
-      <img src="https://school.jbedu.kr/files/2023/04/gs-jungang/13e17432cdef4823ad8f2aa389c613ae.jpg" alt="디지털도서관" class="h-10">
-      <img src="https://school.jbedu.kr/files/2025/06/support/9f5f475201d2404790f28fc3bf894ce0.jpg" alt="전북특별자치도교육청" class="h-10">
-      <img src="https://school.jbedu.kr/files/2025/06/support/3055bfb1c9644657b1715278684bc886.jpg" alt="청소년 1388" class="h-10">
-      <img src="https://school.jbedu.kr/files/2025/06/support/5ff67d4af5784ca3a6adad8b257edcf6.jpg" alt="EBSi" class="h-10">
-    </div>
+    <h2 class="text-2xl font-bold mt-6 mb-3" style="font-family: 'Pretendard-Bold';">전화번호</h2>
+    <ul class="list-disc list-inside space-y-1">
+      <li style="font-family: 'Pretendard-Light';">교무실: 063-453-9025(6)</li>
+      <li style="font-family: 'Pretendard-Light';">FAX: 063-731-2999</li>
+      <li style="font-family: 'Pretendard-Light';">행정실: 063-453-9163</li>
+      <li style="font-family: 'Pretendard-Light';">FAX: 063-453-9164</li>
+    </ul>
   </div>
 </section>
 
-<!-- 푸터 -->
-<footer class="bg-white text-neutral-500 border-t border-neutral-200 py-6 text-xs text-center leading-relaxed">
-  개인정보처리방침&nbsp;|&nbsp;저작권보호정책&nbsp;|&nbsp;이메일무단수집거부
-  <br>
-  (우:54045) 전북특별자치도 군산시 성산면 군산대로 123<br>
-  전화: 063-453-9025&nbsp;FAX: 063-731-2999<br>
- Copyright © 2025. Team NexusWay. All Rights Reserved.| Powered by <a href="https://school.jbedu.kr/gs-jungang" target="_blank" class="footer-link-span">JUNGANG High School</a>
-</footer>
-
-<!-- 공지 팝업 -->
-<div id="noticePopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden">
-  <div class="bg-white rounded-xl shadow-lg max-w-md w-[90%] p-6 relative animate-fadeIn">
-    <!-- 닫기 버튼 -->
-    <button id="closeNotice" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl font-bold">
-      &times;
-    </button>
-
-<!-- 팝업 내용 -->
-<h2 class="text-2xl font-bold mb-3 text-gray-900" style="font-family: 'Pretendard-Bold';">
-  공지 안내
-</h2>
-<p class="text-gray-800 mb-6" style="font-family: 'Pretendard-Regular'; line-height:1.6;">
-  안녕하세요, 방문자님.<br>
-  본 홈페이지는 <span class="font-semibold">팀넥서스웨이 비공식 프로젝트</span>입니다.<br><br>
-  일부 페이지는 현재 이용이 제한될 수 있으며, 게시된 정보는 최신성을 보장하지 않습니다.<br>
-  참고용으로만 활용해 주시기 바랍니다.<br><br>
-  보다 정확한 정보는 공식 홈페이지를 통해 확인해 주세요.
-</p>
-
-    <!-- 버튼 영역 -->
-    <div class="flex flex-col sm:flex-row justify-end gap-3">
-      <button id="acknowledgeNotice" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium" style="font-family: 'Pretendard-Medium';">
-        확인
-      </button>
-      <a href="https://school.jbedu.kr/gs-jungang" target="_blank" class="bg-gray-200 hover:bg-gray-300 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium text-center" style="font-family: 'Pretendard-Medium';">
-        공식 홈페이지 바로가기
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- 스크립트 -->
+<!-- 구글 지도 API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDa-IM5w902TWKuCHcgGrbnprRTCgUS0s"></script>
 <script>
-  const noticePopup = document.getElementById('noticePopup');
-  const closeNotice = document.getElementById('closeNotice');
-  const acknowledgeNotice = document.getElementById('acknowledgeNotice');
+  function initMap() {
+    const schoolLocation = { lat: 36.0017432, lng: 126.7851151 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: schoolLocation,
+      zoom: 17
+    });
 
-  if (!localStorage.getItem('noticeAcknowledged')) {
-    noticePopup.classList.remove('hidden');
+    // 마커
+    const marker = new google.maps.Marker({
+      position: schoolLocation,
+      map: map,
+      title: "군산중앙고등학교"
+    });
   }
 
-  const hidePopup = () => {
-    noticePopup.classList.add('hidden');
-    localStorage.setItem('noticeAcknowledged', 'true');
-  }
-
-  closeNotice.addEventListener('click', hidePopup);
-  acknowledgeNotice.addEventListener('click', hidePopup);
+  window.addEventListener("load", initMap);
 </script>
 
-<style>
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fadeIn {
-    animation: fadeIn 0.35s ease-out;
-  }
-</style>
 
+  <!-- 푸터 -->
+  <footer class="bg-gray-100 text-gray-700 border-t border-gray-300 py-6 text-xs text-center leading-relaxed">
+    개인정보처리방침&nbsp;|&nbsp;저작권보호정책&nbsp;|&nbsp;이메일무단수집거부
+    <br>
+    (우:54045) 전북특별자치도 군산시 성산면 군장대길 13<br>
+    전화: 063-453-9025&nbsp;FAX: 063-731-2999 | 행정실: 063-453-9163&nbsp;FAX: 063-453-9164<br>
+    Copyright © 2025. Team NexusWay. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
