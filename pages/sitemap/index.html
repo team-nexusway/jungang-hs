@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>군산중앙고등학교ㅣ학교현황</title>
+  <title>군산중앙고등학교ㅣ사이트맵</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @font-face {
@@ -60,7 +60,6 @@
   background: rgba(20,20,20,.6); /* 스크롤 전 배경색 */
   backdrop-filter: blur(10px);
 }
-
   </style>
 </head>
 
@@ -256,258 +255,73 @@ function toggleDropdown(id) {
     });
   </script>
 
-<section class="relative min-h-[60vh] flex flex-col items-center justify-start px-6 pt-36 pb-16">
-  <div class="max-w-[1100px] w-full">
-    <header class="mb-10 text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight" style="font-family: 'Pretendard-ExtraBold';">학교현황</h1>
-      <p class="text-lg text-gray-600 mt-4">학급편제, 교원/행정 현황, 학교시설 정보를 한눈에.</p>
-    </header>
+<!-- 사이트맵 섹션 -->
+<section class="relative min-h-[80vh] flex flex-col items-center justify-start px-6 pt-36 pb-16">
+  <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6" style="font-family: 'Pretendard-Bold';">사이트맵</h1>
+  <p class="text-lg mb-10 text-center text-gray-600">군산중앙고등학교 홈페이지의 전체 메뉴도 한눈에.</p>
 
-<div class="grid gap-8">
+  <div class="grid md:grid-cols-3 gap-8 w-full max-w-6xl">
+    <!-- 학교 소개 -->
+    <div class="bg-white rounded-xl border border-gray-300 p-6">
+      <h3 class="text-xl font-bold mb-4">학교 소개</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/greetings/" class="hover:text-blue-600">인사말</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/since/" class="hover:text-blue-600">학교연혁</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/symbol/" class="hover:text-blue-600">학교상징</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/situation/" class="hover:text-blue-600">학교현황</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/map/" class="hover:text-blue-600">오시는길</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/reservation/" class="hover:text-blue-600">시설예약</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/staffs/" class="hover:text-blue-600">교직원 소개</a></li>
+        <li><a href="https://team-nexusway.github.io/jungang-hs/pages/counsel/" class="hover:text-blue-600">학부모 민원상담 예약</a></li>
+      </ul>
+    </div>
 
-  <!-- 학급편제 및 학생수 -->
-  <article class="bg-white rounded-2xl shadow-sm border border-gray-200">
-    <div class="px-6 py-5 border-b border-gray-100">
-      <h2 class="text-xl font-bold">학급편제 및 학생수(정원)</h2>
+    <!-- 교육 활동 -->
+    <div class="bg-white rounded-xl border border-gray-300 p-6">
+      <h3 class="text-xl font-bold mb-4">교육 활동</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-blue-600">교과마당</a></li>
+        <li><a href="#" class="hover:text-blue-600">부서별 교육활동</a></li>
+        <li><a href="#" class="hover:text-blue-600">주간소식/공지사항</a></li>
+        <li><a href="#" class="hover:text-blue-600">창체·동아리 및 봉사활동</a></li>
+      </ul>
     </div>
-    <div class="p-4 overflow-x-auto">
-      <table class="min-w-full text-sm border-collapse">
-        <thead>
-          <tr class="bg-gray-50">
-            <th class="px-4 py-2 border-b text-left">구분</th>
-            <th class="px-4 py-2 border-b text-left">1학년</th>
-            <th class="px-4 py-2 border-b text-left">2학년</th>
-            <th class="px-4 py-2 border-b text-left">3학년</th>
-            <th class="px-4 py-2 border-b text-left">총계</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">편성학급수</td>
-            <td class="px-4 py-2 border-b">8</td>
-            <td class="px-4 py-2 border-b">8</td>
-            <td class="px-4 py-2 border-b">8</td>
-            <td class="px-4 py-2 border-b">24</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">학생수</td>
-            <td class="px-4 py-2 border-b">212</td>
-            <td class="px-4 py-2 border-b">194</td>
-            <td class="px-4 py-2 border-b">190</td>
-            <td class="px-4 py-2 border-b">596</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </article>
 
-  <!-- 교원현황(정원) -->
-  <article class="bg-white rounded-2xl shadow-sm border border-gray-200">
-    <div class="px-6 py-5 border-b border-gray-100">
-      <h2 class="text-xl font-bold">교원현황(정원)</h2>
-      <p class="text-xs text-gray-500 mt-1">※ 제공된 수치를 그대로 반영했습니다. 빈칸은 미제공 데이터입니다.</p>
+    <!-- 학생 지원 -->
+    <div class="bg-white rounded-xl border border-gray-300 p-6">
+      <h3 class="text-xl font-bold mb-4">학생 지원</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-blue-600">총학생회</a></li>
+        <li><a href="#" class="hover:text-blue-600">상담(성폭력·학교폭력)</a></li>
+        <li><a href="#" class="hover:text-blue-600">학사일정/앨범·보도자료</a></li>
+        <li><a href="#" class="hover:text-blue-600">진학자료/대학입시</a></li>
+        <li><a href="#" class="hover:text-blue-600">생활관/기숙사/급식</a></li>
+        <li><a href="#" class="hover:text-blue-600">교무실/가정통신문/행정실</a></li>
+      </ul>
     </div>
-    <div class="p-4 overflow-x-auto">
-      <table class="min-w-full text-sm border-collapse">
-        <thead>
-          <tr class="bg-gray-50">
-            <th class="px-4 py-2 border-b text-left">구분</th>
-            <th class="px-4 py-2 border-b text-left">교장</th>
-            <th class="px-4 py-2 border-b text-left">교감</th>
-            <th class="px-4 py-2 border-b text-left">교과교사</th>
-            <th class="px-4 py-2 border-b text-left">영양교사</th>
-            <th class="px-4 py-2 border-b text-left">진로상담</th>
-            <th class="px-4 py-2 border-b text-left">전문상담</th>
-            <th class="px-4 py-2 border-b text-left">보건</th>
-            <th class="px-4 py-2 border-b text-left">특수</th>
-            <th class="px-4 py-2 border-b text-left">사서</th>
-            <th class="px-4 py-2 border-b text-left">계</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">남</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">28</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">30</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">여</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">17</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">20</td>
-          </tr>
-          <tr class="bg-gray-50/60 font-semibold">
-            <td class="px-4 py-2 border-b">계</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">45</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">50</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </article>
 
-  <!-- 교원현황(현원) -->
-  <article class="bg-white rounded-2xl shadow-sm border border-gray-200">
-    <div class="px-6 py-5 border-b border-gray-100">
-      <h2 class="text-xl font-bold">교원현황(현원)</h2>
-      <p class="text-xs text-gray-500 mt-1">※ 성별이 명시된 항목은 성별 합계를 계산했습니다.</p>
+    <!-- 행정/정보 -->
+    <div class="bg-white rounded-xl border border-gray-300 p-6">
+      <h3 class="text-xl font-bold mb-4">행정/정보</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-blue-600">학교운영위원회</a></li>
+        <li><a href="#" class="hover:text-blue-600">예산결산공개·발전기금</a></li>
+        <li><a href="#" class="hover:text-blue-600">정보공개/공공데이터</a></li>
+      </ul>
     </div>
-    <div class="p-4 overflow-x-auto">
-      <table class="min-w-full text-sm border-collapse">
-        <thead>
-          <tr class="bg-gray-50">
-            <th class="px-4 py-2 border-b text-left">구분</th>
-            <th class="px-4 py-2 border-b text-left">남</th>
-            <th class="px-4 py-2 border-b text-left">여</th>
-            <th class="px-4 py-2 border-b text-left">계</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">교장</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">교감</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">교과교사(정규)</td>
-            <td class="px-4 py-2 border-b">22</td>
-            <td class="px-4 py-2 border-b">12</td>
-            <td class="px-4 py-2 border-b">34</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">교과교사(기간제)</td>
-            <td class="px-4 py-2 border-b">6</td>
-            <td class="px-4 py-2 border-b">5</td>
-            <td class="px-4 py-2 border-b">11</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">영양교사</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">전문상담</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">보건</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </article>
 
-  <!-- 행정현황 -->
-  <article class="bg-white rounded-2xl shadow-sm border border-gray-200">
-    <div class="px-6 py-5 border-b border-gray-100">
-      <h2 class="text-xl font-bold">행정현황</h2>
+    <!-- 동창회 -->
+    <div class="bg-white rounded-xl border border-gray-300 p-6">
+      <h3 class="text-xl font-bold mb-4">동창회</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-blue-600">총동창회</a></li>
+        <li><a href="#" class="hover:text-blue-600">재경동창회</a></li>
+      </ul>
     </div>
-    <div class="p-4 overflow-x-auto">
-      <table class="min-w-full text-sm border-collapse">
-        <thead>
-          <tr class="bg-gray-50">
-            <th class="px-4 py-2 border-b text-left">구분</th>
-            <th class="px-4 py-2 border-b text-left">행정실장</th>
-            <th class="px-4 py-2 border-b text-left">일반직</th>
-            <th class="px-4 py-2 border-b text-left">교무실무사</th>
-            <th class="px-4 py-2 border-b text-left">영양사</th>
-            <th class="px-4 py-2 border-b text-left">교육공무직</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">남</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">3</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">-</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">여</td>
-            <td class="px-4 py-2 border-b">-</td>
-            <td class="px-4 py-2 border-b">2</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">1</td>
-            <td class="px-4 py-2 border-b">7</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </article>
-
-  <!-- 학교시설 / 교지현황 -->
-  <article class="bg-white rounded-2xl shadow-sm border border-gray-200">
-    <div class="px-6 py-5 border-b border-gray-100">
-      <h2 class="text-xl font-bold">학교시설 / 교지현황</h2>
-    </div>
-    <div class="p-4 overflow-x-auto">
-      <table class="min-w-full text-sm border-collapse">
-        <thead>
-          <tr class="bg-gray-50">
-            <th class="px-4 py-2 border-b text-left">구분</th>
-            <th class="px-4 py-2 border-b text-left">교지</th>
-            <th class="px-4 py-2 border-b text-left">체육장</th>
-            <th class="px-4 py-2 border-b text-left">계</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="hover:bg-gray-50">
-            <td class="px-4 py-2 border-b">면적(㎡)</td>
-            <td class="px-4 py-2 border-b">20,177</td>
-            <td class="px-4 py-2 border-b">8,168</td>
-            <td class="px-4 py-2 border-b">28,345</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </article>
-
-</div>
-
-<!-- 비고 -->
-<p class="text-xs text-gray-500 mt-6">
-  ※ 개인정보 보호를 위해 최소 정보만 노출하도록 구성했습니다. 항목명/순서 변경, 합계 계산 노출 여부 등 요청 주시면 바로 반영할게요.
-</p>
-
   </div>
 </section>
+
+
 
   <!-- 푸터 -->
   <footer class="bg-gray-100 text-gray-700 border-t border-gray-300 py-6 text-xs text-center leading-relaxed">
@@ -517,7 +331,6 @@ function toggleDropdown(id) {
     전화: 063-453-9025&nbsp;FAX: 063-731-2999 | 행정실: 063-453-9163&nbsp;FAX: 063-453-9164<br>
     Copyright © 2025. Team NexusWay. All Rights Reserved.
   </footer>
-
 
 </body>
 </html>
